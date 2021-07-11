@@ -4,7 +4,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.springframework.http.HttpHeaders;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +17,7 @@ public class HttpClient01 {
 
     public static void main(String[] args) throws IOException {
         HttpClient client = new DefaultHttpClient();
-        HttpGet request = new HttpGet("http://localhost:8801");
+        HttpGet request = new HttpGet("http://localhost:8801/controller");
         HttpResponse response = client.execute(request);
 
         // Get the response
